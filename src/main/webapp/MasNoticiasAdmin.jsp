@@ -144,31 +144,6 @@
             box-shadow: none;
         }
     </style>
-    <style>
-        .nav-link i {
-            margin-right: 8px;  /* Espaciado entre el icono y el texto */
-            font-size: 1.2rem;   /* Tamaño más grande de los íconos */
-        }
-
-        .nav-link.active {
-            font-weight: bold;
-            color: #007bff; /* Color azul para el enlace activo */
-        }
-
-        .nav-link {
-            font-size: 1rem;  /* Tamaño de texto */
-            color: #333;      /* Color de texto por defecto */
-            transition: all 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: #007bff;   /* Color de texto al pasar el mouse */
-        }
-
-        .nav-link:focus {
-            outline: none; /* Eliminar el borde al hacer foco en los enlaces */
-        }
-    </style>
 </head>
 <body>
 <div class="sidebar">
@@ -201,37 +176,28 @@
 
 <div class="content-wrapper">
     <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <button class="btn btn-primary me-3" id="toggleSidebar">
-                <i class="fas fa-bars"></i>
-            </button>
-            <a class="navbar-brand" href="#">Panel de Administración</a>
-            <div class="ms-auto">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            <i class="fas fa-user me-2"></i> Nombre Usuario
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Perfil</a></li>
-                            <li><a class="dropdown-item" href="#">Configuración</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+        <a class="navbar-brand" href="#">Panel de Administración</a>
+        <div class="ms-auto">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <i class="fas fa-user me-2"></i> Nombre Usuario
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Perfil</a></li>
+                        <li><a class="dropdown-item" href="#">Configuración</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </nav>
 
     <div class="container mt-4">
         <h1>Gestión de Noticias</h1>
-
-        <!-- Botón para agregar nueva noticia -->
-        <button class="btn btn-success mb-4" data-bs-toggle="modal" data-bs-target="#addNoticiaModal">Agregar Noticia</button>
-
-        <!-- Tabla de Noticias -->
-        <table class="table table-bordered">
+        <button class="btn btn-custom mb-4" data-bs-toggle="modal" data-bs-target="#addNoticiaModal">Agregar Noticia</button>
+        <table class="table table-bordered table-custom">
             <thead>
             <tr>
                 <th>ID</th>
@@ -291,11 +257,11 @@
                     </div>
                 </div>
             </div>
+
             <% } %>
             </tbody>
         </table>
     </div>
-
 </div>
 
 <!-- Modal para agregar nueva noticia -->
@@ -333,13 +299,5 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    // Función para alternar la visibilidad de la sidebar
-    document.getElementById('toggleSidebar').addEventListener('click', function() {
-        document.querySelector('.sidebar').classList.toggle('d-none');
-        document.querySelector('.content-wrapper').classList.toggle('ms-0');
-        document.querySelector('.content-wrapper').style.marginLeft = document.querySelector('.sidebar').classList.contains('d-none') ? '0' : 'var(--sidebar-width)';
-    });
-</script>
 </body>
 </html>

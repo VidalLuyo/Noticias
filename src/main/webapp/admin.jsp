@@ -178,23 +178,20 @@
     </div>
     <div class="sidebar-menu">
         <nav class="nav flex-column">
-            <a class="nav-link active" href="#">
+            <a class="nav-link active" href="admin.jsp">
                 <i class="fas fa-chalkboard-teacher"></i> Docentes
             </a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="">
                 <i class="fas fa-book-open"></i> Contenido 1
             </a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="ContenidoAdmin.jsp">
                 <i class="fas fa-file-alt"></i> Contenido 2
             </a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="AlbumAdmin.jsp">
                 <i class="fas fa-camera-retro"></i> Álbum de Fotos
             </a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="MasNoticiasAdmin.jsp">
                 <i class="fas fa-book"></i> Contenido 3
-            </a>
-            <a class="nav-link" href="#">
-                <i class="fas fa-images"></i> Contenido 4
             </a>
         </nav>
     </div>

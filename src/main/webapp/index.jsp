@@ -1,8 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<% TituloDTO titulo = null; %>
-<%@ page import="pe.edu.vallegrande.model.TituloDTO" %>
+
 <%@ page import="java.util.List" %>
-<%@ page import="pe.edu.vallegrande.controller.TituloController" %>
 <%@ page import="pe.edu.vallegrande.model.ContenidoDTO" %>
 <%@ page import="pe.edu.vallegrande.controller.ContenidoController" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -676,38 +674,7 @@
 
 <header class="header">
 </header>
-<div class="container">
-    <header class="header">
-        <h1>Lima</h1>
-    </header><br>
-    <main class="main-content">
-        <!-- Noticia destacada -->
-        <section class="highlight-news">
-            <h2>Dirigente de transportistas exige la renuncia del ministro Juan Santiváñez tras asesinato de chofer de empresa 'El Rápido'</h2>
-            <img src="${pageContext.request.contextPath}/Img/Director.png" alt="Noticia principal" class="main-image">
-            <p>
-                En declaraciones a <strong>RPP</strong>, el vicepresidente de la Alianza Nacional de Transportistas,
-                <strong>Julio Campos</strong>, señaló que evalúan realizar un paro nacional el 10, 11 o 12 de diciembre, debido a la creciente ola de criminalidad en el país.
-            </p>
-        </section>
 
-        <!-- Noticias secundarias -->
-        <aside class="side-news">
-            <div class="news-item">
-                <img src="${pageContext.request.contextPath}/Img/Director.png" alt="Noticia 1">
-                <h3>¡Hace historia! Max Verstappen es el campeón del mundo de Fórmula 1 en Las Vegas</h3>
-                <p class="author">por <strong>Katia Choque</strong> · 07:19 hs</p>
-            </div>
-            <div class="news-item">
-                <img src="${pageContext.request.contextPath}/Img/Director.png" alt="Noticia 2">
-                <h3>Gustavo Costas y su devoción por el Señor de los Milagros: llevó pin del Cristo Moreno...</h3>
-                <p class="author">por <strong>Freddy Chávarry</strong> · 17:00 hs</p>
-            </div>
-        </aside>
-    </main>
-    <header class="header">
-    </header><br>
-</div>
 
 
 <!-- Footer Fijo -->
