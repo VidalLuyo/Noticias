@@ -152,23 +152,23 @@
     </div>
     <div class="sidebar-menu">
         <nav class="nav flex-column">
-            <a class="nav-link active" href="#">
+            <a class="nav-link active" href="admin.jsp">
                 <i class="fas fa-chalkboard-teacher"></i> Docentes
             </a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="">
                 <i class="fas fa-book-open"></i> Contenido 1
             </a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="ContenidoAdmin.jsp">
                 <i class="fas fa-file-alt"></i> Contenido 2
             </a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="AlbumAdmin.jsp">
                 <i class="fas fa-camera-retro"></i> Álbum de Fotos
             </a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="MasNoticiasAdmin.jsp">
                 <i class="fas fa-book"></i> Contenido 3
             </a>
-            <a class="nav-link" href="#">
-                <i class="fas fa-images"></i> Contenido 4
+            <a class="nav-link" href="VdsAdmin.jsp">
+                <i class="fas fa-camera-retro"></i> Videos
             </a>
         </nav>
     </div>
@@ -176,21 +176,26 @@
 
 <div class="content-wrapper">
     <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#">Panel de Administración</a>
-        <div class="ms-auto">
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                        <i class="fas fa-user me-2"></i> Nombre Usuario
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#">Perfil</a></li>
-                        <li><a class="dropdown-item" href="#">Configuración</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
-                    </ul>
-                </li>
-            </ul>
+        <div class="container-fluid">
+            <button class="btn btn-primary me-3" id="toggleSidebar">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="#">Panel de Administración</a>
+            <div class="ms-auto">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user me-2"></i> Jesús Vidal
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Perfil</a></li>
+                            <li><a class="dropdown-item" href="#">Configuración</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="index.jsp">Cerrar Sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -299,5 +304,13 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Función para alternar la visibilidad de la sidebar
+    document.getElementById('toggleSidebar').addEventListener('click', function() {
+        document.querySelector('.sidebar').classList.toggle('d-none');
+        document.querySelector('.content-wrapper').classList.toggle('ms-0');
+        document.querySelector('.content-wrapper').style.marginLeft = document.querySelector('.sidebar').classList.contains('d-none') ? '0' : 'var(--sidebar-width)';
+    });
+</script>
 </body>
 </html>

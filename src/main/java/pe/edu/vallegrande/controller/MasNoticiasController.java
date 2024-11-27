@@ -6,6 +6,7 @@ import pe.edu.vallegrande.model.MasNoticiasDTO;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class MasNoticiasController {
 
@@ -30,8 +31,9 @@ public class MasNoticiasController {
             System.out.println("Error al listar las noticias.");
             e.printStackTrace();
         }
-        return noticiasList;
+        return noticiasList.isEmpty() ? new ArrayList<>() : noticiasList;  // Retorna lista vacía si no hay noticias
     }
+
 
     /* Agregar una nueva noticia */
     public void agregarNoticia(MasNoticiasDTO noticia) {
@@ -50,6 +52,8 @@ public class MasNoticiasController {
             e.printStackTrace();
         }
     }
+
+
 
     /* Editar una noticia existente */
     public void editarNoticia(MasNoticiasDTO noticia) {
@@ -95,6 +99,28 @@ public class MasNoticiasController {
             e.printStackTrace();
         }
     }
+
+    public MasNoticiasDTO obtenerNoticiaAleatoria() {
+        String query = "SELECT * FROM Mas_noticias ORDER BY RAND() LIMIT 1";
+        MasNoticiasDTO noticia = null;
+        try (Connection connection = ConexionDB.getConnection();
+             Statement stmt = connection.createStatement();
+             ResultSet rs = stmt.executeQuery(query)) {
+
+            if (rs.next()) {
+                noticia = new MasNoticiasDTO();
+                noticia.setId(rs.getInt("id"));
+                noticia.setContenido(rs.getString("Contenido"));
+                noticia.setDescripcion(rs.getString("descripcion"));
+                noticia.setImg(rs.getString("Img"));
+            }
+        } catch (Exception e) {
+            System.out.println("Error al obtener la noticia aleatoria.");
+            e.printStackTrace();
+        }
+        return noticia;
+    }
+
 
     /* Buscar una noticia por ID */
     public MasNoticiasDTO buscarPorId(int id) {

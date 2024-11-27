@@ -193,6 +193,9 @@
             <a class="nav-link" href="MasNoticiasAdmin.jsp">
                 <i class="fas fa-book"></i> Contenido 3
             </a>
+            <a class="nav-link" href="VdsAdmin.jsp">
+                <i class="fas fa-camera-retro"></i> Videos
+            </a>
         </nav>
     </div>
 </div>
@@ -208,13 +211,13 @@
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            <i class="fas fa-user me-2"></i> Nombre Usuario
+                            <i class="fas fa-user me-2"></i> Jesús Vidal
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="#">Perfil</a></li>
                             <li><a class="dropdown-item" href="#">Configuración</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                            <li><a class="dropdown-item" href="index.jsp">Cerrar Sesión</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -273,6 +276,12 @@
                                     <label for="newImg<%= album.getId() %>">Nueva Imagen (opcional):</label>
                                     <input type="file" id="newImg<%= album.getId() %>" class="form-control-file" name="newImg">
                                 </div>
+
+                                <!-- Aquí es donde agregas un campo para el video -->
+                                <div class="form-group mb-3">
+                                    <label for="newVideo<%= album.getId() %>">Nuevo Video (opcional):</label>
+                                    <input type="file" id="newVideo<%= album.getId() %>" class="form-control-file" name="newVideo" accept="video/*">
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-success">Guardar Cambios</button>
@@ -282,6 +291,7 @@
                     </div>
                 </div>
             </div>
+
             <% } %>
             </tbody>
         </table>
@@ -303,6 +313,11 @@
                         <label for="img">Imagen:</label>
                         <input type="file" id="img" class="form-control-file" name="img" required>
                     </div>
+                    <!-- Aquí es donde agregas un campo para el video -->
+                    <div class="form-group mb-3">
+                        <label for="video">Video:</label>
+                        <input type="file" id="video" class="form-control-file" name="video" accept="video/*">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-custom">Agregar</button>
@@ -313,7 +328,7 @@
     </div>
 </div>
 
-
+<!-- Bootstrap JS -->
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>

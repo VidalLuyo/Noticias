@@ -193,6 +193,9 @@
             <a class="nav-link" href="MasNoticiasAdmin.jsp">
                 <i class="fas fa-book"></i> Contenido 3
             </a>
+            <a class="nav-link" href="VdsAdmin.jsp">
+                <i class="fas fa-camera-retro"></i> Videos
+            </a>
         </nav>
     </div>
 </div>
@@ -208,13 +211,13 @@
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            <i class="fas fa-user me-2"></i> Nombre Usuario
+                            <i class="fas fa-user me-2"></i> Jesús Vidal
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="#">Perfil</a></li>
                             <li><a class="dropdown-item" href="#">Configuración</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                            <li><a class="dropdown-item" href="index.jsp">Cerrar Sesión</a></li>
                         </ul>
                     </li>
                 </ul>

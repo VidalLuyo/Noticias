@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet("/ContenidoServlet")
 @MultipartConfig(fileSizeThreshold = 1024 * 1024, // 1 MB
@@ -48,6 +49,24 @@ public class ContenidoServlet extends HttpServlet {
             }
         } else {
             response.sendRedirect("ContenidoAdmin.jsp?error=No se especificó una acción");
+        }
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Verificar si se pasa un ID de contenido para mostrar un contenido específico
+        String idParam = request.getParameter("id");
+
+        if (idParam != null) {
+            int id = Integer.parseInt(idParam);
+            ContenidoDTO contenido = contenidoController.buscarPorId(id);
+            request.setAttribute("contenido", contenido);
+            request.getRequestDispatcher("/NoticiaDetalle.jsp").forward(request, response);
+        } else {
+            // Si no se pasa un ID, mostrar la lista de todos los contenidos
+            List<ContenidoDTO> contenidos = contenidoController.listarTodos();
+            request.setAttribute("contenidos", contenidos);
+            request.getRequestDispatcher("/Noticias.jsp").forward(request, response);
         }
     }
 

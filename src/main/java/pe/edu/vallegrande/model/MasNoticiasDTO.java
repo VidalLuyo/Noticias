@@ -8,4 +8,5 @@ public class MasNoticiasDTO {
     private String contenido;
     private String descripcion;
     private String img;
+
 }

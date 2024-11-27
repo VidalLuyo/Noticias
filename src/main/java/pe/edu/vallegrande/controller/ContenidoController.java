@@ -33,6 +33,8 @@ public class ContenidoController {
         return contenidoList;
     }
 
+
+
     /* Agregar un nuevo contenido */
     public boolean agregarContenido(ContenidoDTO contenido) {
         String query = "INSERT INTO Contenido (Contenido, descripcion, Img) VALUES (?, ?, ?)";
