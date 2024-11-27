@@ -409,12 +409,12 @@
         <!-- Noticias secundarias -->
         <aside class="side-news">
             <div class="news-item">
-                <img src="${pageContext.request.contextPath}/Img/Director.png" alt="Noticia 1">
+                <img src="${pageContext.request.contextPath}/Img/aniversario3.png" alt="Noticia 1">
                 <h3>¡Hace historia! Max Verstappen es el campeón del mundo de Fórmula 1 en Las Vegas</h3>
                 <p class="author">Esto ocurrio mientras solian ir a tal lugar Esto ocurrio mientras solian ir a tal lugar</p>
             </div>
             <div class="news-item">
-                <img src="${pageContext.request.contextPath}/Img/Director.png" alt="Noticia 2">
+                <img src="${pageContext.request.contextPath}/Img/Car5.png" alt="Noticia 2">
                 <h3>Gustavo Costas y su devoción por el Señor de los Milagros: llevó pin del Cristo Moreno...</h3>
                 <p class="author">Esto ocurrio mientras solian ir a tal lugar  Esto ocurrio mientras solian ir a tal lugar</p>
             </div>
@@ -444,7 +444,7 @@
                         <span class="badge bg-primary mb-2">Destacado</span>
                         <h3 class="card-title"><%= noticiaP.getContenido() %></h3>
                         <p class="card-text"><%= noticiaP.getDescripcion() %></p>
-                        <a href="#" class="btn btn-sm btn-outline-primary">Leer más</a>
+                        <a href="prueba1.jsp" class="btn btn-sm btn-outline-primary">Leer más</a>
                     </div>
                 </div>
 
@@ -459,7 +459,7 @@
                         <span class="badge bg-secondary mb-2">Adicional</span>
                         <h5 class="card-title"><%= noticiaAdicional.getContenido() %></h5>
                         <p class="card-text small"><%= noticiaAdicional.getDescripcion() %></p>
-                        <a href="#" class="btn btn-sm btn-outline-primary">Leer más</a>
+                        <a href="prueba1.jsp" class="btn btn-sm btn-outline-primary">Leer más</a>
                     </div>
                 </div>
                 <%
@@ -482,7 +482,7 @@
                                 <span class="badge <%= badgeClass %> mb-2">Noticia</span>
                                 <h5 class="card-title"><%= noticiaSecundaria.getContenido() %></h5>
                                 <p class="card-text small"><%= noticiaSecundaria.getDescripcion() %></p>
-                                <a href="#" class="btn btn-sm btn-outline-primary">Leer más</a>
+                                <a href="prueba1.jsp" class="btn btn-sm btn-outline-primary">Leer más</a>
                             </div>
                         </div>
                     </div>
@@ -632,7 +632,7 @@
                                 <h3><%= noticiaPrincipal.getContenido() %></h3>
                                 <p class="card-text"><%= noticiaPrincipal.getDescripcion() %></p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <a href="#" class="btn btn-outline-primary">Leer más</a>
+                                    <a href="prueba1.jsp" class="btn btn-outline-primary">Leer más</a>
                                 </div>
                             </div>
                             <% } else { %>

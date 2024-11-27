@@ -391,7 +391,6 @@
 
     <aside class="sidebar">
 
-
       <!-- Te recomendamos -->
       <section class="recommendations">
         <h2>Te recomendamos</h2>
