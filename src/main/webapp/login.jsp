@@ -5,91 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/login.css">
     <!-- SweetAlert CSS -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- Custom CSS -->
-    <style>
-        body {
-            background-color: #f1f1f1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .login-container {
-            background-color: #fff;
-            padding: 4rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .login-container h2 {
-            text-align: center;
-            margin-bottom: 2rem;
-            font-weight: 600;
-        }
-
-        .form-control {
-            border-radius: 25px;
-        }
-
-        .btn-primary {
-            background-color: #007bff;
-            border-radius: 25px;
-            padding: 0.75rem;
-            width: 100%;
-        }
-
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-
-        .form-text {
-            text-align: center;
-        }
-
-        .forgot-password {
-            text-align: right;
-        }
-
-        .forgot-password a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .forgot-password a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
-
 <body>
-<div class="login-container">
-    <h2>Iniciar Sesión</h2>
-    <form id="loginForm" method="post">
-        <div class="mb-3">
-            <label for="email" class="form-label">Correo Electrónico</label>
-            <input type="email" class="form-control" id="email" name="email" required>
+<div class="login-popup">
+    <div class="login-header">
+        <span>¿Deseas comprar o seguir navegando?</span>
+        <button class="close-btn">×</button>
+    </div>
+    <div class="login-content">
+        <a href="#" class="register-btn">REGÍSTRATE GRATIS</a>
+        <h2>Ingresar</h2>
+        <div class="social-login">
+            <a href="https://www.google.com" class="google-btn">
+                <img src="https://w7.pngwing.com/pngs/326/85/png-transparent-google-logo-google-text-trademark-logo.png" alt="Google" class="social-icon">Google
+            </a>
+            <a href="https://www.facebook.com/sanjose.cerroalegre.56" class="facebook-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="social-icon">Facebook
+            </a>
         </div>
-        <div class="mb-3">
-            <label for="password" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="password" name="password" required>
-        </div>
-        <div class="forgot-password mb-3">
-            <a href="#">¿Olvidaste tu contraseña?</a>
-        </div>
-        <button type="submit" class="btn btn-primary">Ingresar</button>
-        <div class="form-text mt-3">
-            ¿No tienes cuenta? <a href="#">Regístrate aquí</a>
-        </div>
-    </form>
+        <span class="line-with-text">o con tu correo</span>
+        <!-- Se agregó el ID al formulario -->
+        <form id="loginForm" action="#" method="POST">
+            <div class="input-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="submit-btn">Ingresar</button>
+        </form>
+        <a href="#" class="forgot-password">Olvidé mi contraseña</a>
+    </div>
 </div>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- SweetAlert JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 <!-- Script para validación y redirección -->
 <script>
@@ -124,5 +80,4 @@
     });
 </script>
 </body>
-
 </html>

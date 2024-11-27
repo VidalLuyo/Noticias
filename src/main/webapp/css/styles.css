@@ -1,0 +1,440 @@
+/* Barra superior */
+.top-bar {
+    background-color: #111;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.top-bar ul {
+    display: inline-flex; /* Los enlaces estarán alineados horizontalmente */
+    gap: 15px; /* Espacio entre los enlaces */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.top-bar ul li {
+    display: inline;
+}
+
+.top-bar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 15px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.top-bar ul li a:hover {
+    background-color: #ffd600;
+    border-radius: 5px;
+}
+
+/* Asegura que el enlace "Iniciar sesión" esté al final */
+.top-bar ul li:last-child {
+    margin-left: auto; /* Mueve el último elemento al final */
+}
+
+/* Encabezado */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Botón Menú y Buscar */
+.header-left {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.menu-button {
+    background-color: #ededed;
+    border: 1px solid #dcdcdc;
+    border-radius: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-form {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    border: 1px solid #dcdcdc;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background-color: #ededed;
+}
+
+.search-form input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+}
+
+.search-form button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Logotipo */
+.header-center .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo .circle {
+    width: 50px;
+    height: 50px;
+    background-color: #ffd600;
+    border-radius: 50%;
+}
+
+.logo span {
+    font-weight: bold;
+}
+
+/* Menú lateral */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -100%; /* El menú está completamente oculto fuera de la pantalla */
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: none; /* Sin sombra ni borde visible */
+    transition: left 0.3s ease; /* Desliza el menú de izquierda a derecha */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1000;
+}
+
+.side-menu.open {
+    left: 0; /* El menú se desliza y aparece al hacer clic */
+}
+
+/* Encabezado del menú */
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center; /* Centra el logo en el menú */
+}
+
+.menu-logo .circle {
+    width: 50px;
+    height: 50px;
+    background-color: #ffd600;
+    border-radius: 50%;
+}
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Redes sociales */
+.social-section p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center; /* Centra el texto */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px; /* Da espacio después de las redes sociales */
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ededed;
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+.whatsapp-button,
+.sports-button {
+    padding: 10px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.whatsapp-button {
+    background-color: #25d366;
+}
+
+.sports-button {
+    background-color: #0056b3;
+}
+
+/* Secciones */
+.sections-box {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.sections-box h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+}
+
+.sections-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sections-list li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.arrow {
+    font-weight: bold;
+}
+
+/* Calendario */
+.calendar-container {
+    margin-top: 20px; /* Espacio debajo del encabezado */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    width: 300px;
+    position: absolute; /* Posiciona el calendario fuera del flujo normal */
+    top: 130px; /* Aumenta el margen superior para alejarlo del encabezado */
+    right: 30px; /* Coloca el calendario a la derecha con un margen de 30px */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+
+
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.calendar-header select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.calendar {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar th, .calendar td {
+    width: 14%;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.calendar td {
+    border: 1px solid #ddd;
+}
+
+.calendar td.today {
+    background-color: #ffd600;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Contenedor de los artículos */
+.article-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre los artículos */
+    margin-top: 50px; /* Espacio superior para separar del calendario */
+    padding-left: 20px; /* Alineación con el título */
+    max-width: 100%; /* Asegura que los cuadros no se estiren más allá del límite */
+}
+
+/* Estilo para el título "Archivo" */
+.archivo-title {
+    font-size: 24px;
+    color: #333;
+    margin: 40px 0 20px 20px; /* Espacio superior y debajo */
+    font-weight: bold;
+}
+
+/* Artículo individual */
+.article {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 70px;
+    gap: 30px; /* Espacio entre la imagen y el texto */
+    max-width: 1250px; /* Controla el tamaño horizontal para que no se estiren */
+    width: 100%; /* Se adapta al tamaño del contenedor */
+    height: auto; /* Ajusta la altura al contenido */
+}
+
+/* Imagen del artículo */
+.article-image {
+    width: 150px; /* Aumenta el tamaño de la imagen */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Título del artículo */
+.article-text h2 {
+    font-size: 22px; /* Aumenta el tamaño de la fuente del título */
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+/* Descripción breve */
+.article-text p {
+    font-size: 16px; /* Aumenta el tamaño de la fuente de la descripción */
+    color: #666;
+    margin: 0;
+}
+
+/* Información de tiempo */
+.article-time {
+    font-size: 14px; /* Aumenta el tamaño de la fuente del tiempo */
+    color: #999;
+    margin-top: 5px;
+}
+
+/* Enlace "Leer más" */
+.article-more {
+    font-size: 16px; /* Aumenta el tamaño de la fuente del enlace */
+    color: #ffcc00;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.article-more:hover {
+    text-decoration: underline;
+}
+
+/* Contenedor para más noticias */
+.more-news-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilo del botón de "Ver más noticias" */
+.load-more-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.load-more-btn:hover {
+    background-color: #218838;
+}
+
+/* Ocultar artículos adicionales */
+.hidden {
+    display: none;
+}
+
+/* Noticia 1 */
+.news-container {
+    width: 95.5%;              /* Ajusta el ancho al 95% del contenedor principal */
+    max-width: 1500px;       /* Puede ampliar aún más el ancho máximo */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;           /* Aumento el padding para que el contenido sea más espacioso */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-top: 20px;
+    min-height: 600px;       /* Asegura una altura mínima para el cuadro */
+}
+
+.news-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.news-item {
+    text-align: left;
+}
+
+.news-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.news-item h2 {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #000;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 5px 0 10px;
+}
+
+.author {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+
+

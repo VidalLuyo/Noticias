@@ -20,13 +20,15 @@
   </properties>
 
   <dependencies>
+    <!-- JUnit para pruebas -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.13.1</version>
       <scope>test</scope>
     </dependency>
-    <!-- JSP and Servlet Dependencies -->
+
+    <!-- Dependencia de JSP y Servlet -->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
@@ -34,26 +36,21 @@
       <scope>provided</scope>
     </dependency>
 
-    <!-- JSTL -->
+    <!-- JSTL para las etiquetas JSP -->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>jstl</artifactId>
       <version>1.2</version>
     </dependency>
 
-    <!-- SQL Server JDBC Connector -->
+    <!-- Conector JDBC para SQL Server -->
     <dependency>
       <groupId>com.microsoft.sqlserver</groupId>
       <artifactId>mssql-jdbc</artifactId>
       <version>9.2.0.jre8</version>
     </dependency>
 
-    <!-- Bootstrap CDN -->
-    <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>bootstrap</artifactId>
-      <version>5.0.0</version>
-    </dependency>
+    <!-- Lombok para reducir el código estándar -->
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
@@ -61,6 +58,7 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
+
 
   <build>
     <finalName>Noticias_Proyecto</finalName>

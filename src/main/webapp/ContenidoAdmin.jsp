@@ -1,12 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="pe.edu.vallegrande.controller.DocenteController" %>
-<%@ page import="pe.edu.vallegrande.model.DocenteDTO" %>
+
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<%@ page import="pe.edu.vallegrande.controller.ContenidoController" %>
+<%@ page import="pe.edu.vallegrande.model.ContenidoDTO" %>
 <%@ page import="java.util.List" %>
 
 <%
-    // Inicializar el controlador de docentes
-    DocenteController docenteController = new DocenteController();
-    List<DocenteDTO> docentes = docenteController.listarTodos(); // Obtener la lista de docentes
+    // Inicializar el controlador de contenidos
+    ContenidoController contenidoController = new ContenidoController();
+    List<ContenidoDTO> contenidos = contenidoController.listarTodos(); // Obtener la lista de contenidos
 %>
 
 <!DOCTYPE html>
@@ -14,7 +16,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Administración</title>
+    <title>Panel de Administración - Contenidos</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome para iconos -->
@@ -226,66 +228,67 @@
     </nav>
 
     <div class="container-fluid mt-4">
-        <h1>Gestión de Docentes</h1>
+        <h1>Gestión de Contenidos</h1>
 
-        <!-- Botón para agregar nuevo docente -->
-        <button class="btn btn-custom mb-4" data-bs-toggle="modal" data-bs-target="#addDocenteModal">Agregar Docente</button>
+        <!-- Botón para agregar nuevo contenido -->
+        <button class="btn btn-custom mb-4" data-bs-toggle="modal" data-bs-target="#addContenidoModal">Agregar Contenido</button>
 
-        <!-- Tabla de Docentes -->
+        <!-- Tabla de Contenidos -->
         <table class="table table-bordered table-custom">
             <thead>
             <tr>
                 <th>ID</th>
                 <th>Imagen</th>
-                <th>Nombre</th>
+                <th>Contenido</th>
                 <th>Descripción</th>
                 <th>Acciones</th>
             </tr>
             </thead>
             <tbody>
-            <% for (DocenteDTO docente : docentes) { %>
+            <% for (ContenidoDTO contenido : contenidos) { %>
             <tr>
-                <td><%= docente.getId() %></td>
-                <td><img src="<%= docente.getImg() %>" alt="Imagen Docente" width="50"></td>
-                <td><%= docente.getNombres() %></td>
-                <td><%= docente.getDescripcion2() %></td>
+                <td><%= contenido.getId() %></td>
+                <td><img src="<%= contenido.getImg() %>" alt="Imagen Contenido" width="50"></td>
+                <td><%= contenido.getContenido() %></td>
+                <td><%= contenido.getDescripcion() %></td>
                 <td>
-                    <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editDocenteModal<%= docente.getId() %>">Editar</button>
-                    <form action="DocenteServlet" method="POST" style="display: inline;">
+                    <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editContenidoModal<%= contenido.getId() %>">Editar</button>
+                    <form action="ContenidoServlet" method="POST" style="display: inline;">
                         <input type="hidden" name="action" value="delete">
-                        <input type="hidden" name="id" value="<%= docente.getId() %>">
+                        <input type="hidden" name="id" value="<%= contenido.getId() %>">
                         <button type="submit" class="btn btn-danger-custom btn-sm">Eliminar</button>
                     </form>
+
                 </td>
             </tr>
 
-            <!-- Modal para editar docente -->
-            <div class="modal fade" id="editDocenteModal<%= docente.getId() %>" tabindex="-1" aria-labelledby="editDocenteModalLabel" aria-hidden="true">
+            <!-- Modal para editar contenido -->
+            <div class="modal fade" id="editContenidoModal<%= contenido.getId() %>" tabindex="-1" aria-labelledby="editContenidoModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form action="DocenteServlet" method="POST" enctype="multipart/form-data">
-                            <input type="hidden" name="action" value="edit">
-                            <input type="hidden" name="id" value="<%= docente.getId() %>">
+                        <form action="ContenidoServlet" method="POST" enctype="multipart/form-data" accept-charset="UTF-8">
+                        <input type="hidden" name="action" value="edit">
+                            <input type="hidden" name="id" value="<%= contenido.getId() %>">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="editDocenteModalLabel">Editar Docente</h5>
+                                <h5 class="modal-title" id="editContenidoModalLabel">Editar Contenido</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <div class="form-group mb-3">
-                                    <label for="nombres<%= docente.getId() %>">Nombre:</label>
-                                    <input type="text" id="nombres<%= docente.getId() %>" class="form-control" name="nombres" value="<%= docente.getNombres() %>" required>
+                                    <label for="contenido<%= contenido.getId() %>">Contenido:</label>
+                                    <input type="text" id="contenido<%= contenido.getId() %>" class="form-control" name="contenido" value="<%= contenido.getContenido() %>" required>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label for="descripcion2<%= docente.getId() %>">Descripción:</label>
-                                    <textarea id="descripcion2<%= docente.getId() %>" class="form-control" name="descripcion2" required><%= docente.getDescripcion2() %></textarea>
+                                    <label for="descripcion<%= contenido.getId() %>">Descripción:</label>
+                                    <textarea id="descripcion<%= contenido.getId() %>" class="form-control" name="descripcion" required><%= contenido.getDescripcion() %></textarea>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label>Imagen Actual:</label><br>
-                                    <img src="<%= docente.getImg() %>" alt="Imagen Actual" class="img-thumbnail" width="150">
+                                    <img src="<%= contenido.getImg() %>" alt="Imagen Actual" class="img-thumbnail" width="150">
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label for="newImg<%= docente.getId() %>">Nueva Imagen (opcional):</label>
-                                    <input type="file" id="newImg<%= docente.getId() %>" class="form-control-file" name="newImg">
+                                    <label for="newImg<%= contenido.getId() %>">Nueva Imagen (opcional):</label>
+                                    <input type="file" id="newImg<%= contenido.getId() %>" class="form-control-file" name="newImg">
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -302,24 +305,24 @@
     </div>
 </div>
 
-<!-- Modal para agregar nuevo docente -->
-<div class="modal fade" id="addDocenteModal" tabindex="-1" aria-labelledby="addDocenteModalLabel" aria-hidden="true">
+<!-- Modal para agregar nuevo contenido -->
+<div class="modal fade" id="addContenidoModal" tabindex="-1" aria-labelledby="addContenidoModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form action="DocenteServlet" method="POST" enctype="multipart/form-data">
+            <form action="ContenidoServlet" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="action" value="add">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addDocenteModalLabel">Agregar Docente</h5>
+                    <h5 class="modal-title" id="addContenidoModalLabel">Agregar Contenido</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group mb-3">
-                        <label for="nombres">Nombre:</label>
-                        <input type="text" id="nombres" class="form-control" name="nombres" required>
+                        <label for="contenido">Contenido:</label>
+                        <input type="text" id="contenido" class="form-control" name="contenido" required>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="descripcion2">Descripción:</label>
-                        <textarea id="descripcion2" class="form-control" name="descripcion2" required></textarea>
+                        <label for="descripcion">Descripción:</label>
+                        <textarea id="descripcion" class="form-control" name="descripcion" required></textarea>
                     </div>
                     <div class="form-group mb-3">
                         <label for="img">Imagen:</label>

@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="pe.edu.vallegrande.controller.DocenteController" %>
-<%@ page import="pe.edu.vallegrande.model.DocenteDTO" %>
+<%@ page import="pe.edu.vallegrande.controller.AlbumController" %>
+<%@ page import="pe.edu.vallegrande.model.AlbumDTO" %>
 <%@ page import="java.util.List" %>
 
 <%
-    // Inicializar el controlador de docentes
-    DocenteController docenteController = new DocenteController();
-    List<DocenteDTO> docentes = docenteController.listarTodos(); // Obtener la lista de docentes
+    // Inicializar el controlador de álbumes
+    AlbumController albumController = new AlbumController();
+    List<AlbumDTO> albums = albumController.listarTodas(); // Obtener la lista de álbumes
 %>
 
 <!DOCTYPE html>
@@ -226,66 +226,55 @@
     </nav>
 
     <div class="container-fluid mt-4">
-        <h1>Gestión de Docentes</h1>
+        <h1>Gestión de Álbumes</h1>
 
-        <!-- Botón para agregar nuevo docente -->
-        <button class="btn btn-custom mb-4" data-bs-toggle="modal" data-bs-target="#addDocenteModal">Agregar Docente</button>
+        <!-- Botón para agregar nuevo álbum -->
+        <button class="btn btn-custom mb-4" data-bs-toggle="modal" data-bs-target="#addAlbumModal">Agregar Álbum</button>
 
-        <!-- Tabla de Docentes -->
+        <!-- Tabla de Álbumes -->
         <table class="table table-bordered table-custom">
             <thead>
             <tr>
                 <th>ID</th>
                 <th>Imagen</th>
-                <th>Nombre</th>
-                <th>Descripción</th>
                 <th>Acciones</th>
             </tr>
             </thead>
             <tbody>
-            <% for (DocenteDTO docente : docentes) { %>
+            <% for (AlbumDTO album : albums) { %>
             <tr>
-                <td><%= docente.getId() %></td>
-                <td><img src="<%= docente.getImg() %>" alt="Imagen Docente" width="50"></td>
-                <td><%= docente.getNombres() %></td>
-                <td><%= docente.getDescripcion2() %></td>
+                <td><%= album.getId() %></td>
+                <td><img src="<%= album.getImg() %>" alt="Imagen Álbum" width="50"></td>
                 <td>
-                    <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editDocenteModal<%= docente.getId() %>">Editar</button>
-                    <form action="DocenteServlet" method="POST" style="display: inline;">
+                    <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editAlbumModal<%= album.getId() %>">Editar</button>
+                    <form action="AlbumServlet" method="POST" style="display:inline;">
                         <input type="hidden" name="action" value="delete">
-                        <input type="hidden" name="id" value="<%= docente.getId() %>">
+                        <input type="hidden" name="id" value="<%= album.getId() %>">
                         <button type="submit" class="btn btn-danger-custom btn-sm">Eliminar</button>
                     </form>
                 </td>
             </tr>
 
-            <!-- Modal para editar docente -->
-            <div class="modal fade" id="editDocenteModal<%= docente.getId() %>" tabindex="-1" aria-labelledby="editDocenteModalLabel" aria-hidden="true">
+            <!-- Modal para editar álbum -->
+            <div class="modal fade" id="editAlbumModal<%= album.getId() %>" tabindex="-1" aria-labelledby="editAlbumModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form action="DocenteServlet" method="POST" enctype="multipart/form-data">
+                        <form action="AlbumServlet" method="POST" enctype="multipart/form-data">
                             <input type="hidden" name="action" value="edit">
-                            <input type="hidden" name="id" value="<%= docente.getId() %>">
+                            <input type="hidden" name="id" value="<%= album.getId() %>">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="editDocenteModalLabel">Editar Docente</h5>
+                                <h5 class="modal-title" id="editAlbumModalLabel">Editar Álbum</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <div class="form-group mb-3">
-                                    <label for="nombres<%= docente.getId() %>">Nombre:</label>
-                                    <input type="text" id="nombres<%= docente.getId() %>" class="form-control" name="nombres" value="<%= docente.getNombres() %>" required>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label for="descripcion2<%= docente.getId() %>">Descripción:</label>
-                                    <textarea id="descripcion2<%= docente.getId() %>" class="form-control" name="descripcion2" required><%= docente.getDescripcion2() %></textarea>
-                                </div>
+
                                 <div class="form-group mb-3">
                                     <label>Imagen Actual:</label><br>
-                                    <img src="<%= docente.getImg() %>" alt="Imagen Actual" class="img-thumbnail" width="150">
+                                    <img src="<%= album.getImg() %>" alt="Imagen Actual" class="img-thumbnail" width="150">
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label for="newImg<%= docente.getId() %>">Nueva Imagen (opcional):</label>
-                                    <input type="file" id="newImg<%= docente.getId() %>" class="form-control-file" name="newImg">
+                                    <label for="newImg<%= album.getId() %>">Nueva Imagen (opcional):</label>
+                                    <input type="file" id="newImg<%= album.getId() %>" class="form-control-file" name="newImg">
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -302,25 +291,17 @@
     </div>
 </div>
 
-<!-- Modal para agregar nuevo docente -->
-<div class="modal fade" id="addDocenteModal" tabindex="-1" aria-labelledby="addDocenteModalLabel" aria-hidden="true">
+<!-- Modal para agregar nuevo álbum -->
+<div class="modal fade" id="addAlbumModal" tabindex="-1" aria-labelledby="addAlbumModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form action="DocenteServlet" method="POST" enctype="multipart/form-data">
+            <form action="AlbumServlet" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="action" value="add">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addDocenteModalLabel">Agregar Docente</h5>
+                    <h5 class="modal-title" id="addAlbumModalLabel">Agregar Álbum</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="form-group mb-3">
-                        <label for="nombres">Nombre:</label>
-                        <input type="text" id="nombres" class="form-control" name="nombres" required>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="descripcion2">Descripción:</label>
-                        <textarea id="descripcion2" class="form-control" name="descripcion2" required></textarea>
-                    </div>
                     <div class="form-group mb-3">
                         <label for="img">Imagen:</label>
                         <input type="file" id="img" class="form-control-file" name="img" required>
@@ -334,6 +315,7 @@
         </div>
     </div>
 </div>
+
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

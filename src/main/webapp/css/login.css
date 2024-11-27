@@ -1,0 +1,213 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que padding y border no expandan los elementos */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+:root {
+    --primary-yellow: #ffcc00;
+    --light-gray: #f0f4f8;
+    --dark-gray: #666;
+    --border-gray: #ddd;
+}
+
+/* Estilos de la ventana de login */
+.login-popup {
+    background-color: #fff;
+    width: 380px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    position: relative;
+    border: 1px solid var(--border-gray);
+    border-top: 3px solid var(--primary-yellow);
+    border-bottom: 3px solid var(--primary-yellow);
+}
+
+/* Header */
+.login-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: var(--dark-gray);
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: red; /* Efecto hover */
+}
+
+/* Contenido */
+.login-content {
+    text-align: center;
+}
+
+.register-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--primary-yellow);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-btn:hover {
+    text-decoration: underline;
+}
+
+/* Títulos y separadores */
+h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.line-with-text {
+    font-size: 14px;
+    color: var(--dark-gray);
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+}
+
+.line-with-text::before,
+.line-with-text::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 1px;
+    background-color: var(--border-gray);
+    transform: translateY(-50%);
+}
+
+.line-with-text::before {
+    left: 0;
+}
+
+.line-with-text::after {
+    right: 0;
+}
+
+/* Input */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: var(--dark-gray);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-gray);
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: var(--primary-yellow);
+    outline: none;
+}
+
+/* Botones sociales */
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.google-btn, .facebook-btn {
+    padding: 10px 15px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.google-btn {
+    background-color: #db4437;
+    color: white;
+}
+
+.google-btn:hover {
+    transform: scale(1.05);
+    background-color: #c4382d;
+}
+
+.facebook-btn {
+    background-color: #3b5998;
+    color: white;
+}
+
+.facebook-btn:hover {
+    transform: scale(1.05);
+    background-color: #2e467b;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Botón de enviar */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-yellow);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #e6b800;
+    transform: translateY(-2px);
+}
+
+.forgot-password {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--dark-gray);
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
