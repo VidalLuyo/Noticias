@@ -1,0 +1,73 @@
+USE master;
+DROP DATABASE Noticias;
+CREATE DATABASE Noticias;
+USE Noticias;
+
+drop table Contenido;
+CREATE TABLE Contenido(
+	id int identity(1,1) primary key,
+	Contenido varchar(250),
+	descripcion varchar(250),
+	Img varchar(259)
+);
+
+
+INSERT INTO Contenido (Contenido, descripcion, Img)
+VALUES ('Estudiantes Ganan Competencia Nacional de Ciencias', 'Nuestros alumnos obtuvieron el primer lugar en la Olimpiada','https://th.bing.com/th/id/OIP.Lj9Ugdpz0Cp_qyfNoip0dgHaEK?rs=1&pid=ImgDetMain'),
+('Festival de Arte y Cultura 2023', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://colegiosparroquiales.com/wp-content/uploads/2020/04/sanjose_higinio8-1024x576.jpg'),
+('Equipo de Fútbol Clasifica a Final Regional', 'El equipo de fútbol escolar logró un gran triunfo en la semifinal, avanzando hacia la final regional...', 'https://colegiosparroquiales.com/wp-content/uploads/2024/04/fb83f65f-02da-47ab-9d70-f551d7a2e2e4.jpg');
+
+drop table Docentes;
+CREATE TABLE Docentes(
+	id int identity(1,1) primary key,
+	Img varchar(500),
+	Nombres varchar(150),
+	Descripcion2 varchar(500)
+);
+
+
+INSERT INTO Docentes (Img, Nombres, Descripcion2)
+VALUES 
+('https://colegiosparroquiales.com/wp-content/uploads/2019/12/mixto-san-jose-1536x864.jpg', 'Jesus Pérez', 'Profesor de Matemáticas'),
+('https://colegiosparroquiales.com/wp-content/uploads/2019/12/mixto-san-jose-1536x864.jpg', 'María López', 'Profesora de Ciencias'),
+('https://colegiosparroquiales.com/wp-content/uploads/2019/12/mixto-san-jose-1536x864.jpg', 'Marcia', 'Profesor de Historia');
+
+drop table Albun;
+CREATE TABLE Albun(
+	id int identity(1,1) primary key,
+	Img varchar(500)
+);
+
+INSERT INTO Albun(Img)
+VALUES ('https://scontent-lim1-1.xx.fbcdn.net/v/t1.6435-9/106157922_303385367471350_4849408427707823500_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeH3EMJKcUMKX3yegfVpf9U47vSkQ84lzXPu9KRDziXNcwiqFaeei-_Bd5XM8G0NJu_I2XnvbRIywap5jFVCrtNM&_nc_ohc=F7lTtYK1q-0Q7kNvgH4wauf&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=A1tqHS0fhM8WJ6mNtXT8k2g&oh=00_AYBh08j6nOwJ7viu6iYTutmDl91O2r1rTrCA449REc6QxQ&oe=6758FC67'),
+('https://scontent-lim1-1.xx.fbcdn.net/v/t1.6435-9/106157922_303385367471350_4849408427707823500_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeH3EMJKcUMKX3yegfVpf9U47vSkQ84lzXPu9KRDziXNcwiqFaeei-_Bd5XM8G0NJu_I2XnvbRIywap5jFVCrtNM&_nc_ohc=F7lTtYK1q-0Q7kNvgH4wauf&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=A1tqHS0fhM8WJ6mNtXT8k2g&oh=00_AYBh08j6nOwJ7viu6iYTutmDl91O2r1rTrCA449REc6QxQ&oe=6758FC67'),
+('https://scontent-lim1-1.xx.fbcdn.net/v/t1.6435-9/75135947_303385347471352_1656145013414492145_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeE5pQQSgOE3rJ_mo9iWK-IYv5kTm5yHG7G_mRObnIcbsWiAlxwrJIwcwYQc-Lk6ZKOy70nvSD1aewTQTZXwYVde&_nc_ohc=6EzWW19szHkQ7kNvgHXooa2&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=AY3BerrIyTBzXlq7h6huodd&oh=00_AYB3XIQEKyt-VZNu2lEQYo8gYLmTvTr0-6pI0YTn9vQ6gA&oe=6758DDEA'),
+('https://scontent-lim1-1.xx.fbcdn.net/v/t1.6435-9/80240838_303384787471408_5136034948455633449_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHEC-_igHyG1S-gWZ9J46-_aOl-aAAFzGJo6X5oAAXMYg30bNwcg5oMkWW6WpRyyHxF1OBu8igdI2kPI3TD0n4i&_nc_ohc=nyb96GdHTe4Q7kNvgGu7u-H&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=Ax4HT10ByAvMfOMtYIZzxhy&oh=00_AYAPGX4m__m0OqgQFHx0EL2aq2KL6UV4miTvECyqlXkGTw&oe=6758DFCB'),
+('https://scontent-lim1-1.xx.fbcdn.net/v/t1.6435-9/74584817_176532563489965_8656249823353110528_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGljN3TiPtCnf9H_zTgnFW7lJD_VH0uXHyUkP9UfS5cfIjCAbbHpY62Peue2JciOuYd95ja7lPBg58fXNSj7tQV&_nc_ohc=TGhMsJbA06IQ7kNvgHi8iUK&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=A1Ar7Fxt8Uia3vOZKZ8l4pb&oh=00_AYDx5C2h2N2GwCRx4MARDhDXQSChvYJw9zWvyHKVWgmXBg&oe=6758D1F3'),
+('https://scontent-lim1-1.xx.fbcdn.net/v/t1.6435-9/73099642_176532480156640_6237380562152062976_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG53zhA0RS26P0l3k6eaWzRYNvC7aIv9yRg28Ltoi_3JHj_1cxeNvQskXx-mjgVot98LWr-99x5NbMcw4OQfa9T&_nc_ohc=R8Not6aeQVYQ7kNvgEpyLyr&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=AcriY58D7CB7xk5fLeC2TtV&oh=00_AYBY_JEVuv3COjamooGonmyY7Bg_64HWi33LTadktnfKGw&oe=6758D5AA'),
+('https://scontent-lim1-1.xx.fbcdn.net/v/t1.6435-9/72782897_176276593515562_5638249671085260800_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEEANeL-nm0qZCHR2cxMgdRnnzCCyKoiUGefMILIqiJQWf9GNJn5BogDh3OhKnX6cAutTW91ZBuKS39YTGwNlqp&_nc_ohc=1GyAe6wV2OoQ7kNvgECvGI8&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=ApM887gdA7sJP5eFCnIWXGt&oh=00_AYBBn26aWxaDiyyScZNudOLvoxrev3ZgC-wzR7o8C6FitQ&oe=6758DE58'),
+('https://scontent-lim1-1.xx.fbcdn.net/v/t1.6435-9/72297195_176124763530745_2153442979547709440_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFvE3LWFYF-2HqgRPCz0OJVwRwQroJ37uHBHBCugnfu4Z_CF5cuPmn8dWuKDGEZ7bCDHfUJCTmUT-FHwptni_QN&_nc_ohc=g-jvuUAkYpYQ7kNvgFtNqiB&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=Ay2OXm1nyI1wWz7sys7O7qj&oh=00_AYCQahfggZVhqfzRYHWpUWzm2yIqktFnEg4gmAUYtuyw5w&oe=6758D260');
+
+SELECT * FROM Contenido;
+
+drop table Mas_Noticias;
+CREATE TABLE Mas_noticias(
+	id int identity(1,1) primary key,
+	Contenido varchar(250),
+	descripcion varchar(250),
+	Img varchar(259)
+);
+
+
+INSERT INTO Mas_Noticias (Contenido, descripcion, Img)
+VALUES ('12 Estudiantes Desarrollan Proyecto', 'Un grupo de estudiantes de último año ha desarrollado un innovador proyecto de energía solar que podría revolucionar el consumo energético del colegio...','https://th.bing.com/th/id/OIP.Lj9Ugdpz0Cp_qyfNoip0dgHaEK?rs=1&pid=ImgDetMain'),
+('Victoria en el Torneo Interescolar', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://colegiosparroquiales.com/wp-content/uploads/2020/04/sanjose_higinio8-1024x576.jpg'),
+('Feria de Ciencias 2024', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://colegiosparroquiales.com/wp-content/uploads/2020/04/sanjose_higinio8-1024x576.jpg'),
+('Victoria en el Torneo Interescolar', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://colegiosparroquiales.com/wp-content/uploads/2020/04/sanjose_higinio8-1024x576.jpg'),
+('Nuevo Programa de noticias de los alumnos', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://colegiosparroquiales.com/wp-content/uploads/2020/04/sanjose_higinio8-1024x576.jpg'),
+('Equipo de Voleibol a las Finales', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://colegiosparroquiales.com/wp-content/uploads/2020/04/sanjose_higinio8-1024x576.jpg'),
+('Victoria en el Torneo Interescolar', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://colegiosparroquiales.com/wp-content/uploads/2020/04/sanjose_higinio8-1024x576.jpg'),
+('Equipo de Voleibol a las Finales', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://colegiosparroquiales.com/wp-content/uploads/2020/04/sanjose_higinio8-1024x576.jpg'),
+('Victoria en el Torneo Interescolar', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://colegiosparroquiales.com/wp-content/uploads/2020/04/sanjose_higinio8-1024x576.jpg'),
+('Equipo de Voleibol a las Finales', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://colegiosparroquiales.com/wp-content/uploads/2020/04/sanjose_higinio8-1024x576.jpg'),
+('Exposición de Arte Estudiantil', 'El equipo de fútbol escolar logró un gran triunfo en la semifinal, avanzando hacia la final regional...', 'https://colegiosparroquiales.com/wp-content/uploads/2024/04/fb83f65f-02da-47ab-9d70-f551d7a2e2e4.jpg');
