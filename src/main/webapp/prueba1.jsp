@@ -2,6 +2,7 @@
 <%@ page import="pe.edu.vallegrande.controller.MasNoticiasController" %>
 <%@ page import="pe.edu.vallegrande.model.MasNoticiasDTO" %>
 <%@ page import="java.util.List" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
   // Crear una instancia del controlador para obtener la noticia aleatoria
   MasNoticiasController masNoticiasController = new MasNoticiasController();
@@ -388,36 +389,20 @@
       </div>
     </section>
 
-    <!-- Noticias Laterales y Recomendaciones -->
     <aside class="sidebar">
-      <!-- Lo más leído -->
-      <section class="most-read">
-        <h2>Lo más leído</h2>
-        <div class="news-item">
-          <img src="https://via.placeholder.com/120x120" alt="Noticia más leída">
-          <p><a href="#">Corte Suprema volvió a rechazar pedido de general Lozada para ser excluido de...</a></p>
-        </div>
-        <div class="news-item">
-          <img src="https://via.placeholder.com/120x120" alt="Noticia más leída">
-          <p><a href="#">Falleció José Luis Lecaros, expresidente de la Corte Suprema de Justicia</a></p>
-        </div>
-        <div class="news-item">
-          <img src="https://via.placeholder.com/120x120" alt="Noticia más leída">
-          <p><a href="#">Eduardo Salhuana reconoce errores en aprobación de leyes: "No somos perfectos, somos..."</a></p>
-        </div>
-      </section>
+
 
       <!-- Te recomendamos -->
       <section class="recommendations">
         <h2>Te recomendamos</h2>
-        <div class="recommendation-item">
-          <img src="https://via.placeholder.com/120x120" alt="Recomendación">
-          <p><a href="#">Piura: padres denuncian hallazgo de conserva de Qali Warma presuntamente en mal estado</a></p>
-        </div>
-        <div class="recommendation-item">
-          <img src="https://via.placeholder.com/120x120" alt="Recomendación">
-          <p><a href="#">Ministro Julio Demartini dice que proceso judicial contra Nicanor Boluarte está siendo politizado</a></p>
-        </div>
+
+        <!-- Iterar sobre la lista de videos -->
+        <c:forEach var="video" items="${vdsList}">
+          <div class="recommendation-item">
+            <p><strong>Descripción:</strong> ${video.descripcion}</p>
+            <p><strong>Enlace:</strong> <a href="${video.videos}" target="_blank">${video.videos}</a></p>
+          </div>
+        </c:forEach>
       </section>
     </aside>
   </div>

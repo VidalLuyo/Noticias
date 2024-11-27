@@ -3,12 +3,14 @@ package pe.edu.vallegrande.servlet;
 import pe.edu.vallegrande.controller.VdsController;
 import pe.edu.vallegrande.model.VdsDTO;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet("/VdsServlet")
 public class VdsServlet extends HttpServlet {
@@ -113,5 +115,17 @@ public class VdsServlet extends HttpServlet {
             e.printStackTrace();
             response.sendRedirect("VdsAdmin.jsp?error=Error al intentar eliminar el video");
         }
+    }
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Obtener la lista de videos desde la base de datos
+        List<VdsDTO> vdsList = vdsController.listarTodos();
+
+        // Pasar la lista de videos a la vista JSP
+        request.setAttribute("vdsList", vdsList);
+
+        // Redirigir a la página JSP donde se mostrarán los videos
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/sidebar.jsp");
+        dispatcher.forward(request, response);
     }
 }

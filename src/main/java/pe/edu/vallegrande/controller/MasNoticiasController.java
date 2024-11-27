@@ -100,9 +100,11 @@ public class MasNoticiasController {
         }
     }
 
+    // Método para obtener una noticia aleatoria
     public MasNoticiasDTO obtenerNoticiaAleatoria() {
-        String query = "SELECT * FROM Mas_noticias ORDER BY RAND() LIMIT 1";
         MasNoticiasDTO noticia = null;
+        String query = "SELECT TOP 1 * FROM Mas_noticias ORDER BY NEWID()";  // Utilizamos TOP 1 y NEWID()
+
         try (Connection connection = ConexionDB.getConnection();
              Statement stmt = connection.createStatement();
              ResultSet rs = stmt.executeQuery(query)) {
@@ -110,16 +112,17 @@ public class MasNoticiasController {
             if (rs.next()) {
                 noticia = new MasNoticiasDTO();
                 noticia.setId(rs.getInt("id"));
-                noticia.setContenido(rs.getString("Contenido"));
                 noticia.setDescripcion(rs.getString("descripcion"));
-                noticia.setImg(rs.getString("Img"));
+                noticia.setContenido(rs.getString("contenido"));
+                noticia.setImg(rs.getString("img"));
             }
         } catch (Exception e) {
-            System.out.println("Error al obtener la noticia aleatoria.");
             e.printStackTrace();
         }
+
         return noticia;
     }
+
 
 
     /* Buscar una noticia por ID */
