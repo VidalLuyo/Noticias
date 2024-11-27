@@ -8,14 +8,17 @@ CREATE TABLE Contenido(
 	id int identity(1,1) primary key,
 	Contenido varchar(250),
 	descripcion varchar(250),
-	Img varchar(259)
+	Img varchar(MAX)
 );
 
 
 INSERT INTO Contenido (Contenido, descripcion, Img)
-VALUES ('Estudiantes Ganan Competencia Nacional de Ciencias', 'Nuestros alumnos obtuvieron el primer lugar en la Olimpiada','https://th.bing.com/th/id/OIP.Lj9Ugdpz0Cp_qyfNoip0dgHaEK?rs=1&pid=ImgDetMain'),
-('Festival de Arte y Cultura 2023', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://colegiosparroquiales.com/wp-content/uploads/2020/04/sanjose_higinio8-1024x576.jpg'),
-('Equipo de Fútbol Clasifica a Final Regional', 'El equipo de fútbol escolar logró un gran triunfo en la semifinal, avanzando hacia la final regional...', 'https://colegiosparroquiales.com/wp-content/uploads/2024/04/fb83f65f-02da-47ab-9d70-f551d7a2e2e4.jpg');
+VALUES ('Estudiantes Ganan Competencia Nacional de Ciencias', 'Nuestros alumnos obtuvieron el primer lugar en la Olimpiada','https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/464476729_1287031028934731_5276870439876355225_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEP0cZMI9HZYXV1G7r6pNs62XW4_bbMsXrZdbj9tsyxerTofldTl9xHA0T_XLji9vCjqVm_CNvkPtYjyXa-BoNC&_nc_ohc=LbLtj3cnso8Q7kNvgHd3CnH&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=AD3gUdJKpN97uPZYiE-OYYa&oh=00_AYB_Wzogcp4AmqeuQamNUTDLl5Cb6faA6x6Fz3ReToDc0w&oe=674CD2C9'),
+('Festival de Arte y Cultura 2023', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/464377692_1287005125603988_8729841454948044384_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeESAhXYAki6isWMB6AdpBy2jHsq3rw1y0iMeyrevDXLSPi19F9m1BhDz66ZO5W4qmoMoAdqTfa27Q6xlqNdIq1h&_nc_ohc=tKP1-vu2tR4Q7kNvgGbK0uJ&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=Aee5_84B88zLpqdJwI_W0-k&oh=00_AYBnDm-dv895_VAPKOXe9uyvWwdpm-jxUE8EEkM3SUGDsw&oe=674CBCA1'),
+('Equipo de Ajedrez C Clasifica a Final Regional', 'El equipo de Ajedrez escolar logró un gran triunfo en la semifinal, avanzando hacia la final regional...', 'https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/464268110_1285851775719323_8946892848122628257_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFDdg_niI7KjG3sHSa_SRIV0oZ4d3BqWCDShnh3cGpYIKnuvZttUt5pPJl9azXDpZDtLehAQA-_WsrE5Ab84HSN&_nc_ohc=HkzVPENqbzwQ7kNvgGvgnZ0&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=AZRdkLdUlnhIgJg3aD_LG6j&oh=00_AYAR_Y3F2xYkv_K3NTIAxOAuZbMzB6nX1xvFXtxi88aOgw&oe=674CF076'),
+('Estudiantes Ganan Competencia Nacional de Ciencias', 'Nuestros alumnos obtuvieron el primer lugar en la Olimpiada','https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/463638455_1280646699573164_7130154354899511995_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeElZOiYKDO5X36YZkwpzjQss2ZMqMwvJCyzZkyozC8kLLMB-ZL7LjDaiOC6087k7GPTuaMFrW-NnPjBTJ8Z8_MI&_nc_ohc=nmutdhqi9XgQ7kNvgGbmrfU&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=AVYqH9s1WxCgMeMR7LZWQZm&oh=00_AYDqdogWXy313IJlOeAEwdzn98io43ORmjZ8O4nYkXB19Q&oe=674CF13E'),
+('Festival de Arte y Cultura 2023', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/463731409_1280646649573169_6023752342718969803_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEzn4ZmBDH0W79gkzwr2D60NAEpIaUoUQQ0ASkhpShRBEEbf3EsXKLtc1dETtFLQLf53rprn4xokIGirPMaEqtG&_nc_ohc=VzcE3Ib2NO4Q7kNvgGZP9l4&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=AZ77bD0XePHdluVtxrokVsK&oh=00_AYBHcJPqgLxWRDZb2l_f7z741hwwWirTk3YS4JLozEGjHA&oe=674CE2D4'),
+('Equipo de Fútbol Clasifica a Final Regional', 'El equipo de fútbol escolar logró un gran triunfo en la semifinal, avanzando hacia la final regional...', 'https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/462240180_1273601610277673_1498606944852053977_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGGedL8rOaN54rfr_jpQGihVVZZ5YzuiaVVVlnljO6JpYtAUTPGSrQOVpRLctTOUOP7eDUAR9oMMrs7IlD4BS0H&_nc_ohc=rILNptaZIzIQ7kNvgGcNTGs&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=A7gZ7liQKXn4-kGJ8PdF3bW&oh=00_AYDqyg1gEdKJXOcUxu0G2iXsev6Y8maaZho_fnp5ljbCxg&oe=674CC2CE');
 
 drop table Docentes;
 CREATE TABLE Docentes(
@@ -28,25 +31,30 @@ CREATE TABLE Docentes(
 
 INSERT INTO Docentes (Img, Nombres, Descripcion2)
 VALUES 
-('https://colegiosparroquiales.com/wp-content/uploads/2019/12/mixto-san-jose-1536x864.jpg', 'Jesus Pérez', 'Profesor de Matemáticas'),
-('https://colegiosparroquiales.com/wp-content/uploads/2019/12/mixto-san-jose-1536x864.jpg', 'María López', 'Profesora de Ciencias'),
-('https://colegiosparroquiales.com/wp-content/uploads/2019/12/mixto-san-jose-1536x864.jpg', 'Marcia', 'Profesor de Historia');
+('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/467747812_1306225210348646_1700390777799272224_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHij0U-waK2fvSKA1PKbSkGCXL4173PYuYJcvjXvc9i5u58U2bU5Hfqz4H7gs2yE9cFfUVHXWugEuxLa_NM07fH&_nc_ohc=vfaqsrQL7O8Q7kNvgFmGZJc&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=AKTzqSvKofZ0F6N3tzdVkl8&oh=00_AYDE-Ghc5kY-_4amL-kBNq5N-WJe1eLOCwGuJWiOl5TQvw&oe=674CBC34', 'Maria Matos', 'Profesor de Matemáticas'),
+('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/467494262_1305018640469303_5793598096733253508_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGAWjsZOjlWFg3Lo916rjjlQYTHJh7lzg1BhMcmHuXODfeVGk5RpQVy-m95Eid-1XV4VpTVPv3HRvW8X8-grNfY&_nc_ohc=BA2UaltCfp4Q7kNvgHcz2Rw&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=AF_blTHgURbwYkUdfHSDEvL&oh=00_AYC1JUiQEfbLvshsxAffBqvvv2aYbM-5Z6R084LiM5apcw&oe=674CF111', 'María de la Cruz', 'Profesora de Ciencias'),
+('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/467550973_1305018340469333_2288645495064224340_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHu4Ah3N9zU6mzTJCARQscY8j_vZzgL8YbyP-9nOAvxhts8enQVf8RwhSSmTOwtnuv0N6cAKGgqWKiXFWC5-Oz5&_nc_ohc=vyZiMOkchS8Q7kNvgFc13zQ&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=ACoIDNEYUSs6X556EuksZZV&oh=00_AYDUhxr-qOsnTXRRasQYWVUMg0RAKhqFXtI36JQ2kc6zag&oe=674CD389', 'Alberto Marca', 'Profesor de Historia'),
+('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/466465958_1300099214294579_924332815705287341_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGGowkwjbSp7UiABi-qPbooB9buL_HunwQH1u4v8e6fBEQIRiO68dMbj1nPm4V43EHbIFeNbqFJWxJnYB8oeitO&_nc_ohc=m5S2QdwcO3wQ7kNvgExWddE&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=AvCnLCCwxYH2Wnqu2paXdO8&oh=00_AYAeq8fIUC7SVs8bfQWB7NP9y4I9HFh-79X6k38LJ6PXUg&oe=674CD318', 'Maricielo Yactayo', 'Profesor de Matemáticas'),
+('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/465036785_1294443511526816_7659780875092157993_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFW-YLi1bFhqv3ebEQDyi9u-IKvwhOyVCD4gq_CE7JUIGJRiSSDx6Qv5C9toMDFzOxzCWNzh8h0OawSvsQrHii1&_nc_ohc=w-bQ_33cHPgQ7kNvgHpir5F&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=AW3bXo2_1NqObJofqWEm04M&oh=00_AYAEcvOORlX9LIlLxzIwfQMCaFTJMjvRefdUXGW2-7xsJA&oe=674CC490', 'Cinthia Sanchez', 'Profesora de Ciencias'),
+('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/467550973_1305018340469333_2288645495064224340_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHu4Ah3N9zU6mzTJCARQscY8j_vZzgL8YbyP-9nOAvxhts8enQVf8RwhSSmTOwtnuv0N6cAKGgqWKiXFWC5-Oz5&_nc_ohc=vyZiMOkchS8Q7kNvgFc13zQ&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=ACoIDNEYUSs6X556EuksZZV&oh=00_AYDUhxr-qOsnTXRRasQYWVUMg0RAKhqFXtI36JQ2kc6zag&oe=674CD389', 'Alberto Marca', 'Profesor de Historia');
 
 drop table Albun;
 CREATE TABLE Albun(
-	id int identity(1,1) primary key,
-	Img varchar(500)
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    Img VARCHAR(500)
 );
 
 INSERT INTO Albun(Img)
-VALUES ('https://scontent-lim1-1.xx.fbcdn.net/v/t1.6435-9/106157922_303385367471350_4849408427707823500_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeH3EMJKcUMKX3yegfVpf9U47vSkQ84lzXPu9KRDziXNcwiqFaeei-_Bd5XM8G0NJu_I2XnvbRIywap5jFVCrtNM&_nc_ohc=F7lTtYK1q-0Q7kNvgH4wauf&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=A1tqHS0fhM8WJ6mNtXT8k2g&oh=00_AYBh08j6nOwJ7viu6iYTutmDl91O2r1rTrCA449REc6QxQ&oe=6758FC67'),
-('https://scontent-lim1-1.xx.fbcdn.net/v/t1.6435-9/106157922_303385367471350_4849408427707823500_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeH3EMJKcUMKX3yegfVpf9U47vSkQ84lzXPu9KRDziXNcwiqFaeei-_Bd5XM8G0NJu_I2XnvbRIywap5jFVCrtNM&_nc_ohc=F7lTtYK1q-0Q7kNvgH4wauf&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=A1tqHS0fhM8WJ6mNtXT8k2g&oh=00_AYBh08j6nOwJ7viu6iYTutmDl91O2r1rTrCA449REc6QxQ&oe=6758FC67'),
-('https://scontent-lim1-1.xx.fbcdn.net/v/t1.6435-9/75135947_303385347471352_1656145013414492145_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeE5pQQSgOE3rJ_mo9iWK-IYv5kTm5yHG7G_mRObnIcbsWiAlxwrJIwcwYQc-Lk6ZKOy70nvSD1aewTQTZXwYVde&_nc_ohc=6EzWW19szHkQ7kNvgHXooa2&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=AY3BerrIyTBzXlq7h6huodd&oh=00_AYB3XIQEKyt-VZNu2lEQYo8gYLmTvTr0-6pI0YTn9vQ6gA&oe=6758DDEA'),
-('https://scontent-lim1-1.xx.fbcdn.net/v/t1.6435-9/80240838_303384787471408_5136034948455633449_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHEC-_igHyG1S-gWZ9J46-_aOl-aAAFzGJo6X5oAAXMYg30bNwcg5oMkWW6WpRyyHxF1OBu8igdI2kPI3TD0n4i&_nc_ohc=nyb96GdHTe4Q7kNvgGu7u-H&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=Ax4HT10ByAvMfOMtYIZzxhy&oh=00_AYAPGX4m__m0OqgQFHx0EL2aq2KL6UV4miTvECyqlXkGTw&oe=6758DFCB'),
-('https://scontent-lim1-1.xx.fbcdn.net/v/t1.6435-9/74584817_176532563489965_8656249823353110528_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGljN3TiPtCnf9H_zTgnFW7lJD_VH0uXHyUkP9UfS5cfIjCAbbHpY62Peue2JciOuYd95ja7lPBg58fXNSj7tQV&_nc_ohc=TGhMsJbA06IQ7kNvgHi8iUK&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=A1Ar7Fxt8Uia3vOZKZ8l4pb&oh=00_AYDx5C2h2N2GwCRx4MARDhDXQSChvYJw9zWvyHKVWgmXBg&oe=6758D1F3'),
-('https://scontent-lim1-1.xx.fbcdn.net/v/t1.6435-9/73099642_176532480156640_6237380562152062976_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG53zhA0RS26P0l3k6eaWzRYNvC7aIv9yRg28Ltoi_3JHj_1cxeNvQskXx-mjgVot98LWr-99x5NbMcw4OQfa9T&_nc_ohc=R8Not6aeQVYQ7kNvgEpyLyr&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=AcriY58D7CB7xk5fLeC2TtV&oh=00_AYBY_JEVuv3COjamooGonmyY7Bg_64HWi33LTadktnfKGw&oe=6758D5AA'),
-('https://scontent-lim1-1.xx.fbcdn.net/v/t1.6435-9/72782897_176276593515562_5638249671085260800_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEEANeL-nm0qZCHR2cxMgdRnnzCCyKoiUGefMILIqiJQWf9GNJn5BogDh3OhKnX6cAutTW91ZBuKS39YTGwNlqp&_nc_ohc=1GyAe6wV2OoQ7kNvgECvGI8&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=ApM887gdA7sJP5eFCnIWXGt&oh=00_AYBBn26aWxaDiyyScZNudOLvoxrev3ZgC-wzR7o8C6FitQ&oe=6758DE58'),
-('https://scontent-lim1-1.xx.fbcdn.net/v/t1.6435-9/72297195_176124763530745_2153442979547709440_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFvE3LWFYF-2HqgRPCz0OJVwRwQroJ37uHBHBCugnfu4Z_CF5cuPmn8dWuKDGEZ7bCDHfUJCTmUT-FHwptni_QN&_nc_ohc=g-jvuUAkYpYQ7kNvgFtNqiB&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=Ay2OXm1nyI1wWz7sys7O7qj&oh=00_AYCQahfggZVhqfzRYHWpUWzm2yIqktFnEg4gmAUYtuyw5w&oe=6758D260');
+VALUES 
+('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/436166816_1179798649657970_4526197805965333140_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGVijWCtqqzxuD_h5L6W16qM-UL579df7Iz5Qvnv11_spv2efF8MhHkHfdYJJrd0AKm9aZIXvK9MBeK4FM2KDx3&_nc_ohc=OE-N_h-Z5xkQ7kNvgHfizmv&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=ACHBpFjzn6JRh-Pg7MYH7IH&oh=00_AYBbNoUDqSW20ch704WoeEU_grhArXqErUYAHe2ZX2IaPg&oe=674CC597'),
+('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/444153335_1179789362992232_551478501080401516_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHv_XEIZyoMrXhcadIr6hXn7VF9BHkMYfTtUX0EeQxh9MNZlK8r_JFKw7BR9QySZ-jATlOoNFDTqome4wfvKYX4&_nc_ohc=Wj1cYsX7A5MQ7kNvgEaevxb&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=ACb2Y7tgarjzhyk67YCnI8o&oh=00_AYD90aJlWQvhWIDhsSvkm1VyMczMVOpvA7HdnDS0rAD9sw&oe=674CF224'),
+('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/443696393_1176457363325432_7565053599216887419_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFny_7zq3QtBy8f9XKYE-PwL11yy1K7dmwvXXLLUrt2bGBL4_k4mkWREJfApqb14ws0ORuAEXKySuAi-eUf9PDU&_nc_ohc=mil_4cgdVRAQ7kNvgG05s8O&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=Ap2XG2ZpbZC_kAEwD9Q761r&oh=00_AYDmm3K1RY5fQMvRgvlLs6fttTpjXvVEoL7PHCyrtCjnww&oe=674CDC2D'),
+('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/435957508_1172840370353798_7070215082281015772_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEuIOqJDUwhzNSN3d8jfBx4BBOFBnqcRE4EE4UGepxETtKIKqQKDQV6fbHTHdDnXws4P6DPbUxHCXCFRLvfNH5U&_nc_ohc=gTrqDnk1l28Q7kNvgGxbKrW&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=AZLzcIjcSs7vJUgqMYBWluH&oh=00_AYD-mv7lIxgvvpgIxq9OWBCJDHYDqxUgFf9Q89QfJWMDyg&oe=674CF42D'),
+('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/436221776_1171722100465625_5635525139076963785_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFAePZXyJ8CJ6oNEYaYCEsrBkUiDBcSzlgGRSIMFxLOWFfp0CCuQhhi3danPzTBM1DWH90zLwuT_Bj1vvIruxn1&_nc_ohc=AA1bPaYf-VkQ7kNvgEboY4d&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=ASZfktgzOGjKjaVWdfy_0D1&oh=00_AYCVep5PUSPpSPA-ZIV5Z1LLIalXRFhL_ease5TCEQIOmQ&oe=674CF40B'),
+('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/440588077_1167117777592724_1239764590040686730_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEs-9AmuyBatAEbBU03ZV0iKjoSH1D3AGQqOhIfUPcAZPxJhvZ-Ca7WlekWW3IiqBOYigurcmbRtDRkEX4hgSHj&_nc_ohc=nqMi_QYbJRoQ7kNvgE1eAxS&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=Amuae78QZLLk54mOGPujF6m&oh=00_AYC_kdhxCdTg7vV7sawLdNDmIFC05bX5UvNIKnXGZyP4ng&oe=674CEC83'),
+('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/429765692_1126644608306708_2333461673408026260_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFEzFZuqR04RRABaXGfmUXZ6v-kz31WNpXq_6TPfVY2lZ6A8d_M_3v1QGctmBLH6u_qzr_mYD-QkclLSZpEy1xh&_nc_ohc=rEnvV5eLRRYQ7kNvgHUC-RC&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=ACrkk994MIEnG0ILcZuqo87&oh=00_AYDYdCeKFyaHIyFcYZsj6dq2joDWkoaYN1kuwnCwJRiY-g&oe=674CC141'),
+('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/415070609_1091031015201401_7553437505519255958_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFvh3uOn5c89N2Ou87iD4Z31Wo6m_XxohbVajqb9fGiFjLa6Agddwq74-5pIFBO4bEL5qKA2FOnqO52ww_ZSs7P&_nc_ohc=m_fV2Cb7pMYQ7kNvgFYklLL&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=AmLrCDZmtDP7UqFQU9OzvMm&oh=00_AYAF-p0dCcLseiEsAwuqTPzfCsbEtvqS2S2kDNPwVK9-cg&oe=674CED39');
+
 
 SELECT * FROM Contenido;
 
@@ -55,19 +63,37 @@ CREATE TABLE Mas_noticias(
 	id int identity(1,1) primary key,
 	Contenido varchar(250),
 	descripcion varchar(250),
-	Img varchar(259)
+	Img varchar(MAX)
 );
 
 
 INSERT INTO Mas_Noticias (Contenido, descripcion, Img)
-VALUES ('12 Estudiantes Desarrollan Proyecto', 'Un grupo de estudiantes de último año ha desarrollado un innovador proyecto de energía solar que podría revolucionar el consumo energético del colegio...','https://th.bing.com/th/id/OIP.Lj9Ugdpz0Cp_qyfNoip0dgHaEK?rs=1&pid=ImgDetMain'),
-('Victoria en el Torneo Interescolar', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://colegiosparroquiales.com/wp-content/uploads/2020/04/sanjose_higinio8-1024x576.jpg'),
-('Feria de Ciencias 2024', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://colegiosparroquiales.com/wp-content/uploads/2020/04/sanjose_higinio8-1024x576.jpg'),
-('Victoria en el Torneo Interescolar', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://colegiosparroquiales.com/wp-content/uploads/2020/04/sanjose_higinio8-1024x576.jpg'),
-('Nuevo Programa de noticias de los alumnos', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://colegiosparroquiales.com/wp-content/uploads/2020/04/sanjose_higinio8-1024x576.jpg'),
-('Equipo de Voleibol a las Finales', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://colegiosparroquiales.com/wp-content/uploads/2020/04/sanjose_higinio8-1024x576.jpg'),
-('Victoria en el Torneo Interescolar', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://colegiosparroquiales.com/wp-content/uploads/2020/04/sanjose_higinio8-1024x576.jpg'),
-('Equipo de Voleibol a las Finales', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://colegiosparroquiales.com/wp-content/uploads/2020/04/sanjose_higinio8-1024x576.jpg'),
-('Victoria en el Torneo Interescolar', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://colegiosparroquiales.com/wp-content/uploads/2020/04/sanjose_higinio8-1024x576.jpg'),
-('Equipo de Voleibol a las Finales', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://colegiosparroquiales.com/wp-content/uploads/2020/04/sanjose_higinio8-1024x576.jpg'),
-('Exposición de Arte Estudiantil', 'El equipo de fútbol escolar logró un gran triunfo en la semifinal, avanzando hacia la final regional...', 'https://colegiosparroquiales.com/wp-content/uploads/2024/04/fb83f65f-02da-47ab-9d70-f551d7a2e2e4.jpg');
+VALUES ('12 Estudiantes Desarrollan Proyecto', 'Un grupo de estudiantes de último año ha desarrollado un innovador proyecto de energía solar que podría revolucionar el consumo energético del colegio...','https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/447956922_1189101258727709_451895917404229451_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHHHphbSf-RDvmT637jrZlUFT7FxrfE68gVPsXGt8TryD-6NAbcgJ1p6dKqetlT_mU2SXZL2k2qEbnvIexDfOsH&_nc_ohc=8ETPVmbY14wQ7kNvgFKoZgq&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=An8qijDyXn1Th3vddrBUPAR&oh=00_AYDOZRLbTqTtQ4TMzFPdM0Eflf9pRLnKwm3Fyr8Qc9U8TA&oe=674CDA1B'),
+('Victoria en el Torneo Interescolar', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/448986133_1200376357600199_2988845558534695540_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEgnVGH0kMHmdQ-DExeM1_QKjcYSm6oqpkqNxhKbqiqmT6ii-1LsEv8PgiP7-Qwz9MX7Mj9XcylDU0wVio6UNxZ&_nc_ohc=RNCyqq2dY9gQ7kNvgGyK4KD&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=A3IxOCNl85jC7Dr47UJaQI6&oh=00_AYC3nLi_tWzGYHMfusWl9i-teKzoL7AcjYLV2RdyrjDFew&oe=674CC428'),
+('Feria de Ciencias 2024', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/461153775_1262417714729396_8485561017171152626_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFBjluEwuC4rSZrri9sZ1gsPs3vhUSyWGU-ze-FRLJYZZ3Ky1KH72t0ZFahut7hvss0OtF7-pgCgUGqkZGgePm3&_nc_ohc=fC5zyH4nBXsQ7kNvgHsHlCb&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=ARiCQ4URNUCrVI7Hts7anSt&oh=00_AYBalDfMobHcO3n0IHfUghxLjs393nHwYs5AVW4p37-HvA&oe=674CDBB9'),
+('Victoria en el Torneo Interescolar', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/441923633_1182641312707037_906753119646022343_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHSgeADYUdSLb6ks3U5hN02PbuA4KYPk4E9u4Dgpg-TgWSantuIk4VI9kY7kivvwVsrr9Lysq4kWfFtx1vGBKg1&_nc_ohc=OmNOFA2gvpYQ7kNvgGgB7i0&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=A_VGuhSUcO68bJCZsJHHcn4&oh=00_AYCvJnrG6GrrVXGINq4iCLn0-zd_X6FpZj98x6Mi-vGpVw&oe=674CBDE7'),
+('Nuevo Programa de noticias de los alumnos', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/453043367_1222652788705889_2160814403247939162_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE1oOJmsxVJ2-QHQb-uxcvIyI9iemaRvkLIj2J6ZpG-QjY9lzoRxByQSZV_8XT55IPcnZO59naUScBih7kYjuED&_nc_ohc=WUrdkZw7c-kQ7kNvgHMuNj7&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=AtkZNZVCnyRA4dS7-MUa69w&oh=00_AYA_HnTu1zbrJjrwh5UUSENBt92-lUlo6-iuE5Uqasn4Dg&oe=674CE2F0'),
+('Equipo de Voleibol a las Finales', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/450346788_1208618823442619_7714190327806620054_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHSuF-SLf-m_4LLVahcI6xGKcDL48hAPJApwMvjyEA8kBbyIiSEAZFWkJ1xy7OjGV2eitEI_zTgagdFkG9EY7ZA&_nc_ohc=o0s1A7QYewwQ7kNvgGnEJIp&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=Alnr_Xomc4RMllXz2XgCjqo&oh=00_AYB4RZEuhEP0lq82vIyKjXN5-8NIs8UzPbco6oU-OqtEOQ&oe=674CC937'),
+('Victoria en el Torneo Interescolar', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/456425917_1238222647148903_5601347235925976737_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEmGWOs_dYir0q83Ar0fx48sglGlq6ZpSeyCUaWrpmlJ3gOIXrwiF611-dl-id-blyZ97r030fJpSs9JKzLaiKg&_nc_ohc=KW-ik4tgiLMQ7kNvgELdG9F&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=ADv_fzrTEHPTkbio3LjXYSP&oh=00_AYBh3Bd2F5T5o3zgSDSR_YQewIR-hFTDbKimEU1nsMQYkQ&oe=674CE2C1'),
+('Equipo de Voleibol a las Finales', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/461673679_1267821440855690_5692571896271513169_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFG_HKln5Ov7iq0Zb-BM8AGsKCMBDVxePqwoIwENXF4-qezPDnL6nkXx45aqMpoeDrKZxIds6EShEhSf-oz_LPr&_nc_ohc=0_Ep8qOEZNwQ7kNvgGpfK9b&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=AVrq4FVKkEHHyMnBMN8rPwR&oh=00_AYB5YGl0OAfrfGUL3rI9wvmGWP-iaJPQeY5SIhKVZo3Jtg&oe=674CC69F'),
+('Victoria en el Torneo Interescolar', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/459155427_1252129195758248_3238452955864058534_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF-FxWZt_yzG2t7J7wxwEFSDqCFXvpfzl4OoIVe-l_OXkQNbxJZYvC9piAC7UCtVqMx7NbeAT49AKn6JM6ZAcci&_nc_ohc=wXJoho_f2kEQ7kNvgFHzL_N&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=AF-cKxqH29Fco5sUNQmX1aE&oh=00_AYA3bslTrYdJC_Ip5esxL34ZL-kkN7P5g5Ox4B2KcmzRbw&oe=674CC72C'),
+('Equipo de Voleibol a las Finales', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/461248650_1263409624630205_7674008605476897982_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHELgZKMzxdgMuVbUUY8s77rvWaorrOKZyu9Zqius4pnAX2-iTm19uet4OjB83K-XprB0h29dT4I2-l3x1hoqe5&_nc_ohc=MY2kT_B3NioQ7kNvgGUa5wu&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=ApNxq8ZuWaRXD97ZxZ-Xhw3&oh=00_AYBYpKwNORWs4o14l-zwmdsIKfu1p2h08p0sSH3zhLQJBQ&oe=674CBF39'),
+('Exposición de Arte Estudiantil', 'El equipo de fútbol escolar logró un gran triunfo en la semifinal, avanzando hacia la final regional...', 'https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/461337230_1265047911133043_9191154029388502427_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEn-XAyioFLV8fi5JzLpJV-tAPRNO7rxAa0A9E07uvEBrgUhOrRUuzqy_tpWlVVobMRAwQtuLHSlJQiLEOA_Cla&_nc_ohc=SQoDE53222wQ7kNvgFuabmQ&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=A0eMPcgSgtlmUIz1FF5g8yb&oh=00_AYDbYU6SjVEzYq41JaA4OCz5DcTljplRwML0N6wamKC-Qg&oe=674CD3EA');
+
+
+SELECT * FROM VDS;
+SELECT * FROM Mas_noticias;
+
+
+CREATE TABLE VDS (
+	id int identity(1,1) primary key,
+	Videos varchar(MAX),
+	descripcion varchar(250)
+);
+
+INSERT INTO VDS(Videos, descripcion)
+VALUES ('https://www.facebook.com/share/v/1B4yM9zmwS/', 'Prueba 1'),
+('https://www.facebook.com/colegiosparroquiales/videos/2044034192421191', 'Prueba 2'),
+('https://www.facebook.com/share/v/1Cc47eyh64/', 'Prueba 3'),
+('https://www.facebook.com/share/v/18KYk7vpRa/', 'Prueba 4'),
+('https://www.facebook.com/share/v/1B4yM9zmwS/', 'Prueba 5');
