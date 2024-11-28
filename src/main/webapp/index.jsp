@@ -398,7 +398,7 @@
     <main class="main-content">
         <!-- Noticia destacada -->
         <section class="highlight-news">
-            <h2>Dirigente de transportistas exige la renuncia del ministro Juan Santiváñez tras asesinato de chofer de empresa 'El Rápido'</h2>
+            <h2>La escolta del Colegio Mixto San Jose realizan una excelente participacion en la marcha de instituciones educativas</h2>
             <img src="${pageContext.request.contextPath}/Img/Director.png" alt="Noticia principal" class="main-image">
             <p>
                 En declaraciones a <strong>RPP</strong>, el vicepresidente de la Alianza Nacional de Transportistas,
@@ -585,7 +585,7 @@
                 List<AlbumDTO> fotos = albunController.listarTodas();
 
                 // Limitar a 12 imágenes y mostrarlas en el álbum
-                for (int i = 0; i < fotos.size() && i < 12; i++) {
+                for (int i = 0; i < fotos.size() && i < 8; i++) {
                     AlbumDTO foto = fotos.get(i);
             %>
             <div class="col">
