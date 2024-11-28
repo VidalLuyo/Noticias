@@ -3,7 +3,7 @@ DROP DATABASE Noticias;
 CREATE DATABASE Noticias;
 USE Noticias;
 
-drop table Contenido;
+
 CREATE TABLE Contenido(
 	id int identity(1,1) primary key,
 	Contenido varchar(250),
@@ -20,7 +20,6 @@ VALUES ('Estudiantes Ganan Competencia Nacional de Ciencias', 'Nuestros alumnos 
 ('Festival de Arte y Cultura 2023', 'Estudiantes muestran su talento artístico en exposición anual...', 'https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/463731409_1280646649573169_6023752342718969803_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEzn4ZmBDH0W79gkzwr2D60NAEpIaUoUQQ0ASkhpShRBEEbf3EsXKLtc1dETtFLQLf53rprn4xokIGirPMaEqtG&_nc_ohc=VzcE3Ib2NO4Q7kNvgGZP9l4&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=AZ77bD0XePHdluVtxrokVsK&oh=00_AYBHcJPqgLxWRDZb2l_f7z741hwwWirTk3YS4JLozEGjHA&oe=674CE2D4'),
 ('Equipo de Fútbol Clasifica a Final Regional', 'El equipo de fútbol escolar logró un gran triunfo en la semifinal, avanzando hacia la final regional...', 'https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/462240180_1273601610277673_1498606944852053977_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGGedL8rOaN54rfr_jpQGihVVZZ5YzuiaVVVlnljO6JpYtAUTPGSrQOVpRLctTOUOP7eDUAR9oMMrs7IlD4BS0H&_nc_ohc=rILNptaZIzIQ7kNvgGcNTGs&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=A7gZ7liQKXn4-kGJ8PdF3bW&oh=00_AYDqyg1gEdKJXOcUxu0G2iXsev6Y8maaZho_fnp5ljbCxg&oe=674CC2CE');
 
-drop table Docentes;
 CREATE TABLE Docentes(
 	id int identity(1,1) primary key,
 	Img varchar(500),
@@ -38,7 +37,7 @@ VALUES
 ('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/465036785_1294443511526816_7659780875092157993_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFW-YLi1bFhqv3ebEQDyi9u-IKvwhOyVCD4gq_CE7JUIGJRiSSDx6Qv5C9toMDFzOxzCWNzh8h0OawSvsQrHii1&_nc_ohc=w-bQ_33cHPgQ7kNvgHpir5F&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=AW3bXo2_1NqObJofqWEm04M&oh=00_AYAEcvOORlX9LIlLxzIwfQMCaFTJMjvRefdUXGW2-7xsJA&oe=674CC490', 'Cinthia Sanchez', 'Profesora de Ciencias'),
 ('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/467550973_1305018340469333_2288645495064224340_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHu4Ah3N9zU6mzTJCARQscY8j_vZzgL8YbyP-9nOAvxhts8enQVf8RwhSSmTOwtnuv0N6cAKGgqWKiXFWC5-Oz5&_nc_ohc=vyZiMOkchS8Q7kNvgFc13zQ&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=ACoIDNEYUSs6X556EuksZZV&oh=00_AYDUhxr-qOsnTXRRasQYWVUMg0RAKhqFXtI36JQ2kc6zag&oe=674CD389', 'Alberto Marca', 'Profesor de Historia');
 
-drop table Albun;
+
 CREATE TABLE Albun(
     id INT IDENTITY(1,1) PRIMARY KEY,
     Img VARCHAR(500)
@@ -56,9 +55,6 @@ VALUES
 ('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/415070609_1091031015201401_7553437505519255958_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFvh3uOn5c89N2Ou87iD4Z31Wo6m_XxohbVajqb9fGiFjLa6Agddwq74-5pIFBO4bEL5qKA2FOnqO52ww_ZSs7P&_nc_ohc=m_fV2Cb7pMYQ7kNvgFYklLL&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=AmLrCDZmtDP7UqFQU9OzvMm&oh=00_AYAF-p0dCcLseiEsAwuqTPzfCsbEtvqS2S2kDNPwVK9-cg&oe=674CED39');
 
 
-SELECT * FROM Contenido;
-
-drop table Mas_Noticias;
 CREATE TABLE Mas_noticias(
 	id int identity(1,1) primary key,
 	Contenido varchar(250),
